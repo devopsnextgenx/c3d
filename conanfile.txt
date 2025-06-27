@@ -1,0 +1,17 @@
+[requires]
+boost/1.82.0
+nlohmann_json/3.11.2
+opencv/4.8.0
+gtest/1.14.0
+eigen/3.4.0
+
+[options]
+boost:shared=False
+opencv:shared=False
+
+[generators]
+CMakeToolchain
+CMakeDeps
+
+[layout]
+cmake_layout

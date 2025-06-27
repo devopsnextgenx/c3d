@@ -1,0 +1,24 @@
+{
+  "name": "c3d",
+  "version": "1.0.0",
+  "description": "C3D project with external dependencies",
+  "dependencies": [
+    {
+      "name": "boost",
+      "features": ["system", "filesystem", "thread"]
+    },
+    {
+      "name": "nlohmann-json"
+    },
+    {
+      "name": "opencv",
+      "features": ["core", "imgproc"]
+    },
+    {
+      "name": "gtest"
+    },
+    {
+      "name": "eigen3"
+    }
+  ]
+}
