@@ -1,17 +1,4 @@
-find_package(GTest QUIET)
-
-if(GTest_FOUND)
-    # Use system-installed Google Test
-    set(GTEST_LIBRARIES GTest::gtest GTest::gtest_main)
-    message(STATUS "Using system Google Test")
-elseif(TARGET gtest AND TARGET gtest_main)
-    # Use downloaded/built Google Test
-    set(GTEST_LIBRARIES gtest gtest_main)
-    message(STATUS "Using downloaded Google Test")
-else()
-    message(WARNING "GoogleTest not found. Tests will not be built.")
-    return()
-endif()
+find_package(GTest REQUIRED)
 
 # Unit tests
 add_executable(unit_tests
@@ -20,7 +7,8 @@ add_executable(unit_tests
 )
 
 target_link_libraries(unit_tests PRIVATE
-    ${GTEST_LIBRARIES}
+    GTest::gtest
+    GTest::gtest_main
     c3d_lib
 )
 
@@ -36,7 +24,8 @@ if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/integration/integration_tests.cpp")
     )
     
     target_link_libraries(integration_tests PRIVATE
-        ${GTEST_LIBRARIES}
+        GTest::gtest
+        GTest::gtest_main
         # Link against your libraries to test
     )
     

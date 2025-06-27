@@ -1,13 +1,26 @@
 [requires]
 boost/1.82.0
 nlohmann_json/3.11.2
-opencv/4.8.0
+opencv/4.5.5
 gtest/1.14.0
 eigen/3.4.0
 
 [options]
-boost:shared=False
-opencv:shared=False
+boost/*:shared=False
+opencv/*:shared=False
+opencv/*:with_ffmpeg=False
+ffmpeg/*:with_aom=False
+ffmpeg/*:with_libvpx=False
+ffmpeg/*:with_libwebp=False
+ffmpeg/*:with_libx264=False
+ffmpeg/*:with_libx265=False
+ffmpeg/*:with_openjpeg=False
+ffmpeg/*:with_opus=False
+ffmpeg/*:with_vorbis=False
+ffmpeg/*:with_fdk_aac=False
+ffmpeg/*:with_libmp3lame=False
+ffmpeg/*:with_libopenh264=False
+ffmpeg/*:with_libdav1d=False
 
 [generators]
 CMakeToolchain

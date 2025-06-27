@@ -1,0 +1,11 @@
+[requires]
+gtest/1.14.0
+
+[options]
+
+[generators]
+CMakeToolchain
+CMakeDeps
+
+[layout]
+cmake_layout
