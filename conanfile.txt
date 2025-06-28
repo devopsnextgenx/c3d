@@ -4,6 +4,7 @@ nlohmann_json/3.11.2
 opencv/4.5.5
 gtest/1.14.0
 eigen/3.4.0
+glm/cci.20230113
 
 [options]
 boost/*:shared=False

@@ -80,3 +80,4 @@ add_subdirectory(tests)
 # Installation rules
 install(DIRECTORY include/ DESTINATION include)
 install(FILES README.md DESTINATION .)
+
