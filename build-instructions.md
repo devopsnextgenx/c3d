@@ -26,7 +26,7 @@ conan install . --output-folder=build --build=missing --settings=build_type=Rele
 # Install Debug dependencies (this adds to existing Release dependencies)
 conan install . --output-folder=build --build=missing --settings=build_type=Debug
 python -m conans.conan install . --output-folder=build --build=missing --settings=build_type=Debug
-cmake -B build -S . -DCMAKE_TOOLCHAIN_FILE=build/build/generators/conan_toolchain.cmake -DCMAKE_BUILD_TYPE=Debug
+cmake -S . -B build -DCMAKE_TOOLCHAIN_FILE=build/build/Debug/generators/conan_toolchain.cmake -DCMAKE_BUILD_TYPE=Debug
 cmake --build build --config Debug
 ./build/bin/Debug/unit_tests.exe
 ./build/bin/Debug/basic_example.exe

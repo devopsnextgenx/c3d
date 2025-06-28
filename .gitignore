@@ -53,6 +53,9 @@ conandata.yml
 conanbuildinfo.*
 conaninfo.txt
 graph_info.json
+conan_toolchain.cmake
+conan_deps.cmake
+conan.lock
 .conan/
 
 # vcpkg

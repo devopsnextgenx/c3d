@@ -26,5 +26,4 @@ ffmpeg/*:with_libdav1d=False
 CMakeToolchain
 CMakeDeps
 
-[layout]
-cmake_layout
+# Using default layout for better control

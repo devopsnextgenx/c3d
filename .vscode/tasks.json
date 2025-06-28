@@ -1,0 +1,115 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build-debug",
+            "type": "shell",
+            "command": "./scripts/build-debug.sh",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            },
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "detail": "Build Debug configuration with enhanced debug symbols"
+        },
+        {
+            "label": "build-release",
+            "type": "shell",
+            "command": "./scripts/build-release.sh",
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            },
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "detail": "Build Release configuration"
+        },
+        {
+            "label": "build-both",
+            "type": "shell",
+            "command": "./scripts/build-both.sh",
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            },
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "detail": "Build both Debug and Release configurations"
+        },
+        {
+            "label": "clean-debug",
+            "type": "shell",
+            "command": "./scripts/clean.sh",
+            "args": ["Debug"],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            },
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "detail": "Clean Debug build artifacts"
+        },
+        {
+            "label": "clean-all",
+            "type": "shell",
+            "command": "./scripts/clean.sh",
+            "args": ["all"],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            },
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "detail": "Clean all build artifacts"
+        },
+        {
+            "label": "generate-debug-symbols",
+            "type": "shell",
+            "command": "./scripts/generate-debug-symbols.sh",
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            },
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "detail": "Generate separate debug symbol files for enhanced debugging"
+        }
+    ]
+}
