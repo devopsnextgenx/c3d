@@ -150,9 +150,18 @@ void AppWindow::render_frame() {
         glm::vec3(-1.0f, 0.0f, 0.0f),  // Bottom left
         glm::vec3(1.0f, 0.0f, 0.0f)    // Bottom right
     };
+
+
+    // Draw the triangle with coordinates (0,1), (-1,0), (1,0)
+    std::vector<glm::vec3> triangleVerticesBlue = {
+        glm::vec3(0.0f, 0.0f, 0.0f),   // Top vertex
+        glm::vec3(-0.5f, 0.5f, 0.0f),  // Bottom left
+        glm::vec3(0.5f, 0.5f, 0.0f)    // Bottom right
+    };
     
     // Draw triangle outline in white with optional red fill
-    renderer_->drawTriangle(triangleVertices, Color::white(), Color::red());
+    renderer_->drawTriangle(triangleVerticesBlue, Color::black(), Color::blue());
+    renderer_->drawTriangle(triangleVertices, Color::green(), Color::red());
     
     // End frame rendering
     renderer_->endFrame();
